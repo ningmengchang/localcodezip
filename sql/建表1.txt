@@ -1,0 +1,23 @@
+create table PUB_RES_TYPE
+(
+  res_type_id         NUMBER(8) not null,
+  res_type            VARCHAR2(40) not null,
+  database_name       VARCHAR2(40),
+  geometry_type       NUMBER(4),
+  display_view        VARCHAR2(40),
+  speciality_id       NUMBER(8),
+  isresource          CHAR(1) default '1' not null,
+  query_sql           VARCHAR2(1024),
+  delete_state        CHAR(1) default '0',
+  delete_time         DATE,
+  lan_id              VARCHAR2(10),
+  can_be_checked      NUMBER(22),
+  class_name_en       VARCHAR2(40),
+  inherit_res_type_id NUMBER(22),
+  env_domain_id       VARCHAR2(10) default '0771' not null,
+  create_op           NUMBER(8),
+  create_time         DATE default sysdate,
+  modify_time         DATE,
+  modify_op           NUMBER(8),
+  search_param        VARCHAR2(2000)
+)
